@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,600;1,400;1,700&family=Roboto:wght@100;300;400;500;700;900&display=swap');
+:root{
+    --main-color: #f5af00;
+    --white-color: #fff;
+    --gray-color: #999;
+    --bg-section-color:#f8f8f8;
+    --main-transition: 0.4s;
+}
+/* start global rules */
+html {
+    scroll-behavior: smooth;
+}
+body{
+    font-family: 'Lora', serif;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-color);
+}
+h1,h2,h3,h4,h5,h6{
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+}
+ul{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+::selection {
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+/* end global rules */
+/* start component */
+.title-heading h3{
+    font-size: 45px;
+    font-weight: 400;
+}
+/* end component */
+/* start header */
+.header-scroll {
+    background-color: rgba(51, 51, 51, 0.6) !important;
+    box-shadow: 0 0 5px 0 var(--gray-color);
+}
+.navbar-nav li a {
+    color: var(--white-color);
+    transition: var(--main-transition);
+}
+.navbar-nav .nav-link.active,
+.navbar-nav li a:hover {
+    color: var(--main-color) !important;
+}
+.scroll-to-top {
+    position: fixed;
+    width: 35px;
+    height: 35px;
+    bottom: 25px;
+    right: 20px;
+    z-index: 1000;
+    display: none;
+}
+@media all and (max-width: 991px) {
+    header{
+        background-color: rgba(51, 51, 51, 0.6)
+    }
+}
+/* end header */
+/* start home section */
+.home{
+    background-image: url(../images/2.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+}
+.home .layout{
+    background-color: rgba(51, 51, 51, 0.6);
+}
+.home .caption h1{
+    font-size: 60px;
+    font-weight: 400;
+}
+.home .caption .form-control{
+    width: 400px;
+    max-width: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+    color: var(--white-color);
+    border: none;
+    padding: 10px;
+}
+.home .caption .form-control:focus{
+    box-shadow: 0 0 0 0.25rem rgba(245, 176, 0, .25);
+}
+.home .caption .btn:hover {
+    background-color: transparent;
+    border: 1px solid var(--white-color);
+    transition: var(--main-transition);
+}
+@media all and (max-width: 767px) {
+    .home .caption h1{
+        font-size: 45px;
+    }
+    .home .caption form {
+        flex-wrap: wrap;
+    }
+    .home .caption .form-control{
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+/* end home section */
+/* start gallery section */
+.gallery{
+    background-color: var(--bg-section-color);
+}
+.gallery .nav-pills .nav-link {
+    border-radius: 100px;
+    color: #333;
+}
+.gallery .nav-pills .nav-link:hover{
+    background-color: rgba(245, 176, 0, .3);
+}
+.gallery .nav-pills .nav-link.active {
+    color: var(--white-color);
+    background-color: var(--main-color);
+}
+.gallery .layer{
+    background-color: rgba(245, 176, 0, .8);
+    opacity: 0;
+    transition: 0.8s;
+}
+.gallery .item img {
+    transition: 0.8s;
+}
+.gallery .item:hover .layer{
+    opacity: 1;
+}
+.gallery .item:hover img{
+    transform: scale(1.2);
+}
+.gallery .add-photo{
+    color: var(--white-color);
+}
+.gallery .add-photo:hover{
+    color: var(--gray-color);
+}
+/* end gallery section */
+/* start skills section */
+.head-skills{
+    line-height: 1.6;
+    margin-bottom: 15px;
+}
+.quote {
+    background-color: var(--main-color);
+}
+.quote-btn{
+    transition: var(--main-transition);
+    color: var(--white-color);
+    font-size: 14px;
+}
+.quote-btn:hover{
+    color: #333;
+    background-color: var(--white-color);
+}
+/* end skills section */
+/* start testimonials */
+.testimonials .carousel-item img {
+    transform: translateY(50%);
+}
+.testimonials .client-feadback {
+    border: 2px solid #f1f1f1;
+}
+.testimonials .client-feadback h5::after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 10%;
+    background-color: var(--main-color);
+}
+.testimonials #carouselExampleInterval {
+    margin-top: -60px;
+}
+.testimonials .carousel-indicators [data-bs-target] {
+    text-indent: 0;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+
+}
+/* end testimonials */
+/* start footer */
+footer{
+    border-top: 2px solid #f1f1f1;
+}
+footer ul li a {
+    color: var(--gray-color);
+    transition: var(--main-transition);
+}
+footer p a:hover{
+    opacity: .6 !important;
+}
+footer ul li a:hover{
+    color: var(--main-color);
+}
+/* end footer */
